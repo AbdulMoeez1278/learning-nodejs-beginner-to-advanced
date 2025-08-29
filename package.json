@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/AbdulMoeez1278/learning-nodejs-beginner-to-advanced#readme",
   "dependencies": {
+    "colors": "^1.4.0",
     "express": "^5.1.0",
     "nodemon": "^3.1.10"
   }

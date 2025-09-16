@@ -2,6 +2,7 @@
 
 // fs module - file system module
 const fs = require("fs");
+const os = require("os");
 
 // forcefully add the global objects
 const { log, warn } = require("console");
@@ -26,6 +27,9 @@ console.log(os.platform()); // platform() function
 console.log(os.hostname()); // hostname() function
 console.log(os.cpus()); // cpus() function
 
+const buffer = Buffer.from("Moeez", "utf8");
+console.log(buffer.toString());
+
 // global objects
 
 // console.log() - global object
@@ -38,6 +42,6 @@ console.log(process.cwd());
 console.log(process.pid); // changed everytime when you run it again and again
 
 // forcefully adding the global objects in nodejs
-log("Abdul Moeeez"); // log() method
+log("Abdul Moeez"); // log() method
 warn(process.pid); // warn() method
 log(process.cwd());

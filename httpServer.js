@@ -21,7 +21,7 @@ const server2 = http.createServer((req, res) => {
 });
 
 server2.listen(3001, () => {
-  console.log("Server 2 listening on port 3001");
+  console.log("Server 2 is listening on port 3001");
 });
 
 // interview question

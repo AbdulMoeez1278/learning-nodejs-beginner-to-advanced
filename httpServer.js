@@ -5,8 +5,9 @@ const http = require("http"); // include http module
 const server1 = http.createServer((req, res) => {
   res.write("<h1>Creating http server</h1>");
   res.end("Hello World");
+  console.log("PORT: 3000");
 
-  //   res.writeHead(200, { "Content-Type": "text/plain" });
+  //  res.writeHead(200, { "Content-Type": "text/plain" });
 });
 
 // server listening
@@ -18,6 +19,7 @@ server1.listen(3000, () => {
 const server2 = http.createServer((req, res) => {
   res.writeHead(200, { "Content-Type": "text/plain" });
   res.end("Hello from Server 2!\n");
+  console.log("PORT: 3001");
 });
 
 server2.listen(3001, () => {

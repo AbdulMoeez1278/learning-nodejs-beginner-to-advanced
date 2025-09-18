@@ -22,6 +22,8 @@ const server = http.createServer((req, res) => {
     // Send the content of the HTML file as the response body
     res.end(data);
   });
+
+  console.log(`PORT: ${PORT}`);
 });
 
 // server listening on the specified port

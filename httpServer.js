@@ -12,7 +12,7 @@ const serverOne = http.createServer((req, res) => {
 
 // server listening
 serverOne.listen(3000, () => {
-  console.log("Server 1 is listening on port 3000");
+  console.log("Server 1 is listening on http://localhost:3000");
 });
 
 // Server 2
@@ -23,7 +23,7 @@ const serverTwo = http.createServer((req, res) => {
 });
 
 serverTwo.listen(3001, () => {
-  console.log("Server 2 is listening on port 3001");
+  console.log("Server 2 is listening on http://localhost:3001");
 });
 
 // Server 3
@@ -35,7 +35,7 @@ const serverThree = http.createServer((req, res) => {
 });
 
 serverThree.listen(3002, () => {
-  console.log("Server 3 is listening on port 3002");
+  console.log("Server 3 is listening on http://localhost:3002");
 });
 
 // Server 4
@@ -45,7 +45,7 @@ const serverFour = http.createServer((req, res) => {
 });
 
 serverFour.listen(3003, () => {
-  console.log("Server 4 is listening on port 3003");
+  console.log("Server 4 is listening on http://localhost:3003");
 });
 
 // Server 5
@@ -55,7 +55,7 @@ const serverFive = http.createServer((req, res) => {
 });
 
 serverFive.listen(3004, () => {
-  console.log("Server 5 is listening on port 3004");
+  console.log("Server 5 is listening on http://localhost:3004");
 });
 
 // interview question

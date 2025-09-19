@@ -1,1 +1,54 @@
 This is a sample file
+
+const userData = [
+  {
+    id: 1,
+    name: "Moeez",
+    email: "moeez@gmail.com",
+  },
+  {
+    id: 2,
+    name: "Rameez",
+    email: "rameez@gmail.com",
+  },
+  {
+    id: 3,
+    name: "Zaid",
+    email: "zaid@gmail.com",
+  },
+  {
+    id: 4,
+    name: "Bilal",
+    email: "bilal@gmail.com",
+  },
+  {
+    id: 5,
+    name: "Ahmad",
+    email: "ahmad@gmail.com",
+  },
+  {
+    id: 6,
+    name: "Hamza",
+    email: "hamza@gmail.com",
+  },
+  {
+    id: 7,
+    name: "Abdullah",
+    email: "abdullah@gmail.com",
+  },
+  {
+    id: 8,
+    name: "Ali",
+    email: "ali@gmail.com",
+  },
+  {
+    id: 9,
+    name: "AbuBakar",
+    email: "abubakar@gmail.com",
+  },
+  {
+    id: 10,
+    name: "Zain",
+    email: "zain@gmail.com",
+  },
+];

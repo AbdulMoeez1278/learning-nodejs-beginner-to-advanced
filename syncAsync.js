@@ -18,5 +18,3 @@ fs.readFile("file.txt", function (err, data) {
 });
 
 console.log("Asynchronous in Node.js");
-
-console.log("Synchronous and Asynchronous Programming in Node.js");

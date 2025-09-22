@@ -7,7 +7,6 @@ const jsonData = require("./jsonData");
 const app = express();
 
 const port = 3000;
-const hostname = "127.0.0.1";
 
 // application level router
 const verification = (req, res, next) => {
@@ -53,6 +52,6 @@ app.get("/admin", verification, (req, res) => {
   console.log("Data is stored in the JSON form");
 });
 
-app.listen(port, hostname, () => {
-  console.log(`Server is listening on https://${hostname}:${port}`);
+app.listen(port, () => {
+  console.log("Server is listening on http://localhost:3000");
 });

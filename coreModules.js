@@ -2,6 +2,8 @@
 
 // fs module - file system module
 const fs = require("fs");
+
+//os  modules - operating system module
 const os = require("os");
 
 // forcefully add the global objects
@@ -26,6 +28,8 @@ console.log(os);
 console.log(os.platform()); // platform() function
 console.log(os.hostname()); // hostname() function
 console.log(os.cpus()); // cpus() function
+console.log(os.freemem()); // freemem() function
+console.log(os.totalmem()); //totalmem() function
 
 const buffer = Buffer.from("Moeez", "utf8");
 console.log(buffer.toString());

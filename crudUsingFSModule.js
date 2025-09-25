@@ -18,19 +18,19 @@ fs.readFile(filePath, "utf8", (err, data) => {
   }
 });
 
-// simple method to read the file
-const data = fs.readFileSync(
-  "./fileSystemCRUD/textMain.txt",
-  //   "./fileSystemCRUD/mainText.txt",
-  "utf-8",
-  (err, data) => {
-    if (!err) {
-      //   throw err;
-      console.log("File content asynchronous:", data);
-    }
-  }
-);
-console.log("Data inside file:", data);
+// // simple method to read the file
+// const data = fs.readFileSync(
+//   "./fileSystemCRUD/textMain.txt",
+//   //   "./fileSystemCRUD/mainText.txt",
+//   "utf-8",
+//   (err, data) => {
+//     if (!err) {
+//       //   throw err;
+//       console.log("File content asynchronous:", data);
+//     }
+//   }
+// );
+// console.log("Data inside file:", data);
 
 // update file
 fs.appendFile(filePath, " and file name is mainText.txt", (err) => {

@@ -36,3 +36,6 @@ console.log("File name is:", __filename);
 // 3. relationship
 const filePath = path.join(__dirname, "mainText.txt");
 console.log(filePath);
+
+// print both the directory and filename
+console.log(__dirname, __filename);

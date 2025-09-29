@@ -21,7 +21,7 @@ console.log("Asynchronous in Node.js");
 
 // Blocking code example
 console.log("Start of blocking code");
-const dataFile = fs.readFileSync("file.txt", "utf8"); // Blocks here
+const dataFile = fs.readFileSync("file.txt", "utf8"); //  // Blocks here
 console.log("Blocking operation completed");
 
 // Non-blocking code example

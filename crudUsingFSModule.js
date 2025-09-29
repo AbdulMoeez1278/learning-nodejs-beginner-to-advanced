@@ -6,7 +6,7 @@ const path = require("path");
 const dirPath = path.join(__dirname, "fileSystemCRUD");
 const filePath = `${dirPath}/mainText.txt`;
 
-// write file
+// write file - fs
 fs.writeFileSync(filePath, "This is a simple text file");
 fs.writeFileSync("textMain.txt", "This is a simple text file");
 fs.writeFileSync(`${dirPath}/textMain.txt`, "This is a simple text main file");
@@ -32,19 +32,19 @@ fs.readFile(filePath, "utf8", (err, data) => {
 // );
 // console.log("Data inside file:", data);
 
-// update file
+// update file - fs
 fs.appendFile(filePath, " and file name is mainText.txt", (err) => {
   if (!err) {
     console.log("file is updated");
   }
 });
 
-// rename file
+// rename file - fs
 fs.rename(filePath, `${dirPath}/mainText2.txt`, (err) => {
   if (!err) {
     console.log("file name is updated");
   }
 });
 
-// delete file
+// delete file - fs
 fs.unlinkSync(`${dirPath}/mainText2.txt`);

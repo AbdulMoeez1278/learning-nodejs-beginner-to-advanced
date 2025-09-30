@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/AbdulMoeez1278/learning-nodejs-beginner-to-advanced#readme",
   "dependencies": {
+    "bcryptjs": "^3.0.2",
     "colors": "^1.4.0",
     "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
     "nodemon": "^3.1.10",
     "prompt-sync": "^4.2.0"
   }

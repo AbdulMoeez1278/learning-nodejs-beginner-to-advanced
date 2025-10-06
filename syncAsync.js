@@ -17,6 +17,10 @@ fs.readFile("file.txt", function (err, data) {
   console.log("Data in the file is - " + data.toString());
 });
 
+console.log(
+  "\nNote: The asynchronous read does not block the execution of subsequent code."
+);
+
 console.log("Asynchronous in Node.js");
 
 // Blocking code example

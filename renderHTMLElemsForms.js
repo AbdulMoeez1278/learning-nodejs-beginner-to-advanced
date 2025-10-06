@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true })); // Middleware to parse URL-enco
 app.use(express.json()); // Middleware to parse JSON bodies
 
 app.get("/", (req, res) => {
-  res.render("index", { title: "Rendering HTML & Forms", username: "Guest" }); // Passing data to the template
+  res.render("index", { title: "Rendering HTML & Forms", username: "Moizy" }); // Passing data to the template
 });
 
 app.post("/submit-form", (req, res) => {

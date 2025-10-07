@@ -5,10 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index File</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-    <h1>Home Page</h1>
+    <h1 style="text-align: center;">Home Page</h1>
+
+    <div id="content">
+        <p>This is the main content of the page.</p>
+        <button id="loadDataBtn">Load Data</button>
+        <div id="dataContainer">
+            <!-- Data will be loaded here -->
+        </div>
+    </div>
+
+    <script>
+        const loadDataBtn = document.getElementById('loadDataBtn');
+        loadDataBtn.addEventListener('click', function () {
+            const dataContainer = document.getElementById('dataContainer');
+            setTimeout(() => {
+                dataContainer.innerHTML = "<p>Loading data...</p>";
+            }, 500);
+
+            setTimeout(() => {
+                dataContainer.innerHTML = "";
+            }, 2000);
+            // dataContainer.innerHTML = "<p>Loading data...</p>";
+
+            dataContainer.style.color = "blue";
+            dataContainer.style.fontWeight = "bold";
+            dataContainer.style.fontSize = "20px";
+            dataContainer.style.marginTop = "10px";
+            dataContainer.style.textAlign = "center";
+
+            // Simulate data loading
+            setTimeout(() => {
+                dataContainer.innerHTML = "<p>Data loaded successfully!</p>";
+                dataContainer.style.color = "green";
+                dataContainer.style.fontWeight = "bold";
+                dataContainer.style.fontSize = "20px";
+                dataContainer.style.marginTop = "10px";
+                dataContainer.style.textAlign = "center";
+                console.log("Data loaded and displayed.");
+            }, 3000);
+        });
+
+
+    </script>
 </body>
 
 </html>

@@ -1,7 +1,12 @@
 // Importing modules
 const express = require("express");
 const path = require("path");
+
+// Creating an instance of express
 const app = express();
+
+// Middleware to serve static files
+app.use(express.static(path.join(__dirname, "public")));
 
 // home page route
 app.get("/", (req, res) => {

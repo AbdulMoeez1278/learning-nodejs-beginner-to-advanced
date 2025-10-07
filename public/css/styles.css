@@ -1,0 +1,45 @@
+#content {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+#loadDataBtn {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#loadDataBtn:hover {
+  background-color: #0056b3;
+}
+
+#dataContainer {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+#dataContainer p.loading {
+  color: #007bff;
+  font-style: italic;
+}
+
+#dataContainer p.loaded {
+  color: #28a745;
+  font-weight: bold;
+}
+
+#dataContainer p.error {
+  color: #dc3545;
+  font-weight: bold;
+}

@@ -16,6 +16,10 @@ const verification = (req, res, next) => {
     return res.status(400).send("Age is required and must be a number.");
   }
 
+  if (age <= 0) {
+    return res.status(400).send("Age must be a positive number.");
+  }
+
   if (age < 18) {
     return res.status(403).send("Access denied: User must be 18 or older.");
   }

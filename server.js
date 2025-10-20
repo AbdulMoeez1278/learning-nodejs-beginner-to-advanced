@@ -23,10 +23,20 @@ app.get("/", async (req, res) => {
   try {
     // Check database connection state
     if (mongoose.connection.readyState !== 1) {
+      // log the error message
+      console.log("Database not connected");
+
+      // throws an error
       throw new Error("Database not connected");
     }
     res.send("MongoDB Connection Successful!");
+
+    // log the message
+    console.log("MongoDB Connection Succesful!");
   } catch (err) {
+    // log the error message
+    console.log("Error connecting to MongoDB: " + err.message);
+
     res.status(500).send("Error connecting to MongoDB: " + err.message);
   }
 });

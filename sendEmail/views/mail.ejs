@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Send Email</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-300 to-emerald-70 px-4">
+        <div class="w-full max-w-md bg-white rounded-2xl shadow-2xl p-8">
+            <h2 class="text-2xl font-bold text-center text-gray-800 mb-2">
+                Send an Email
+            </h2>
+            <p class="text-center text-gray-500 mb-8 text-sm">
+                Fill out the form below to send your message
+            </p>
+
+            <form action="/submit-email" method="post" id="emailForm" class="space-y-6">
+                <!-- Subject -->
+                <div>
+                    <label for="subject" class="block text-gray-700 font-medium mb-2">
+                        Subject
+                    </label>
+                    <input type="text" name="subject" id="subject" required
+                        class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-all duration-300"
+                        placeholder="Enter email subject..." autocomplete="off" />
+                </div>
+
+                <!-- Message -->
+                <div>
+                    <label for="message" class="block text-gray-700 font-medium mb-2">
+                        Message
+                    </label>
+                    <textarea name="message" id="message" rows="5" required
+                        class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-800 placeholder-gray-400 
+                 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-all duration-300 resize-none"
+                        placeholder="Write your message here..."></textarea>
+                </div>
+
+                <!-- Button -->
+                <div>
+                    <button type="submit"
+                        class="w-full py-3 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-700 hover:to-emerald-600 text-white font-semibold rounded-xl shadow-md transform hover:scale-[1.02] transition-all duration-300">
+                        Send Email
+                    </button>
+                </div>
+            </form>
+
+            <p class="text-center text-sm text-gray-500 mt-8">
+                Powered by
+                <a href="https://www.instagram.com/moizycodes" target="_blank"
+                    class="font-semibold text-emerald-600 hover:text-emerald-700 hover:underline transition-colors duration-300">
+                    @moizycodes
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Toast Message -->
+    <div id="toast"
+        class="hidden fixed bottom-6 right-6 px-6 py-3 rounded-xl shadow-lg text-md font-medium text-white opacity-0 transform translate-y-6 transition-all duration-500 ease-in-out">
+    </div>
+
+
+    <!-- // Toast Message -->
+    <script>
+        const form = document.getElementById("emailForm");
+        const toast = document.getElementById("toast");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault(); // stop page reload
+
+            const formData = {
+                subject: document.getElementById("subject").value,
+                message: document.getElementById("message").value,
+            };
+
+            try {
+                const res = await fetch("/submit-email", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(formData),
+                });
+
+                const message = await res.text();
+
+                // Show toast success or error
+                if (res.ok) {
+                    showToast(message, "success");
+                    form.reset();
+                } else {
+                    showToast(message, "error");
+                }
+            } catch (error) {
+                showToast("Failed to send email. Try again.", "error");
+            }
+        });
+
+        function showToast(msg, type) {
+            toast.textContent = msg;
+
+            // Base styles + color
+            toast.className =
+                `fixed bottom-6 right-6 px-4 py-3 rounded-xl shadow-lg text-sm font-medium text-white opacity-0 transform translate-y-6 transition-all duration-500 ease-in-out ` +
+                (type === "success"
+                    ? "bg-emerald-600"
+                    : "bg-red-600");
+
+            // Show animation (slide up + fade in)
+            toast.classList.remove("hidden");
+            setTimeout(() => {
+                toast.classList.add("opacity-100", "translate-y-0");
+            }, 50);
+
+            // Hide after 3 seconds with fade-out
+            setTimeout(() => {
+                toast.classList.remove("opacity-100", "translate-y-0");
+                toast.classList.add("opacity-0", "translate-y-6");
+            }, 3000);
+
+            // Fully hide after animation ends
+            setTimeout(() => {
+                toast.classList.add("hidden");
+            }, 3500);
+        }
+    </script>
+
+</body>
+
+</html>

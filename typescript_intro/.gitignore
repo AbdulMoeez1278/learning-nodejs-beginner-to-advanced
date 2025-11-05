@@ -1,0 +1,116 @@
+# ==============================================
+# 📦 Node.js & Backend
+# ==============================================
+
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment variables
+.env
+.env.*      # In case you use multiple env files like .env.local, .env.production
+
+# PM2 Logs
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Build / Output folders
+dist/
+build/
+coverage/
+.cache/
+.tmp/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# ==============================================
+# 🧩 Frontend (Tailwind / React / Vue / Static)
+# ==============================================
+
+# Frontend dependencies
+frontend/node_modules/
+
+# Tailwind or PostCSS cache
+frontend/.cache/
+frontend/.temp/
+
+# Build outputs
+frontend/dist/
+frontend/build/
+
+# ==============================================
+# 🧰 Editors & IDEs
+# ==============================================
+
+# VS Code
+.vscode/
+.history/
+*.code-workspace
+
+# JetBrains IDEs (WebStorm, IntelliJ, etc.)
+.idea/
+*.iml
+
+# ==============================================
+# 🪣 Miscellaneous
+# ==============================================
+
+# Backup / temp files
+*.bak
+*.tmp
+*.swp
+*~
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ==============================================
+# ⚙️ Optional (if using Docker, Prisma, etc.)
+# ==============================================
+
+# Docker
+docker-compose.override.yml
+Dockerfile.local
+.dockerignore
+
+# Prisma
+prisma/migrations/
+
+# ==============================================
+# 🧪 Testing
+# ==============================================
+coverage/
+jest.config.js
+.nyc_output/
+
+# ==============================================
+# ✅ Custom Project Files
+# ==============================================
+
+# Private keys or config
+/config/*.json
+/config/*.js
+/private/
+secrets.json
+firebase.json
+
+# ==============================================
+# ✨ End of File
+# ==============================================

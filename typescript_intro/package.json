@@ -1,0 +1,22 @@
+{
+  "name": "typescript_intro",
+  "version": "1.0.0",
+  "description": "Guide for typescript in node.js",
+  "main": "index.js",
+  "module": "commonjs",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abdul Moeez",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

@@ -30,7 +30,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // logging credentials
-console.log("User:", process.env.SMTP_USER);
+console.log("User exists:", !!process.env.SMTP_USER);
 console.log("Pass exists:", !!process.env.SMTP_PASS);
 
 // get route
@@ -40,13 +40,14 @@ app.get("/mail", (req, res) => {
 
 // post route
 app.post("/submit-email", (req, res) => {
-  console.log(req.body);
-
   const { name, email, subject, message } = req.body;
+  console.log(req.body);
 
   // 1️⃣ Email sent to the company (you)
   const adminMailOptions = {
     from: process.env.SMTP_USER,
+    // if it’s directly from the user (in the “From” header)
+    // from: `${name} <${email}>`
     to: process.env.SMTP_USER, // your company inbox
     subject: `New Contact Form Submission: ${subject}`,
     text: req.body.message,
@@ -94,6 +95,7 @@ app.post("/submit-email", (req, res) => {
         return res.status(500).send("Error sending reply email");
       }
 
+      console.log("Email sent successfully!");
       res.status(200).send("Email sent successfully!");
     });
   });

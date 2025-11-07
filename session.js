@@ -1,4 +1,3 @@
-const { name } = require("ejs");
 const express = require("express");
 const session = require("express-session");
 
@@ -16,12 +15,13 @@ app.use(
 
 // Simple GET route
 app.get("/", (req, res) => {
+  console.log({ id: 1, name: "Abdul Moeez", city: "Lahore" });
   res.send({ id: 1, name: "Abdul Moeez", city: "Lahore" });
 });
 
 // Route to set session data
 app.get("/login", (req, res) => {
-  req.session.user = "Moizy";
+  req.session.user = "Abdul Moeez";
   console.log("Session created and user logged in!");
   res.send("Session created and user logged in!");
 });
@@ -47,7 +47,7 @@ app.get("/logout", (req, res) => {
 });
 
 app.listen(5000, () => {
-  console.log("Server is running on port 5000");
+  console.log(`Server is running on http://localhost:5000`);
 });
 
 // Optional: Store Sessions in MongoDB

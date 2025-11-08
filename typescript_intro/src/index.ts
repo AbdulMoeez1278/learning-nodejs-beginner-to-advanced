@@ -19,7 +19,7 @@ const greetSecond = (name: string, age: number): string | number => {
     return age; // returns number
 };
 
-console.log(greetSecond("Abdul Moeez", 23));
+console.log(greetSecond("Moizy", 23));
 
 // condition base - does'nt return age as well
 const greetUser = (name: string, age: number): string | number => {

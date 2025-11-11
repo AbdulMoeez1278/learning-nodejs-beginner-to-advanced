@@ -1,6 +1,7 @@
 const express = require("express");
 const data = require("./data");
 
+// initialize express app
 const app = express();
 
 // middleware
@@ -9,11 +10,12 @@ app.use((req, res, next) => {
   next();
 });
 
-// get route
+// get route - home
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
+// get route - about
 app.get("/about", (req, res) => {
   res.send(data);
 });

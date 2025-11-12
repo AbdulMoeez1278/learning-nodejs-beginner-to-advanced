@@ -1,3 +1,4 @@
+// impporting required modules
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const app = express();

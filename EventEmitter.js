@@ -39,6 +39,7 @@ const chat = new Chat();
 
 chat.on("message", (msg) => {
   console.log("New Message:", msg);
+  console.log("Abdul Moeez");
 });
 
 chat.sendMessage("Hello Moizy!");

@@ -43,6 +43,7 @@ app.get("/data", (req, res) => {
   res.json({ message: "Data from API" });
 });
 
+// Server listen
 app.listen(3000, () => {
   console.log("Server running on http://localhost:3000");
 });

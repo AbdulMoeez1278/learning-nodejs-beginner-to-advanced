@@ -1,0 +1,1 @@
+If an error happens, that error's callback function won't be executed until a later time. (Until the next iteration's pending callback phase)

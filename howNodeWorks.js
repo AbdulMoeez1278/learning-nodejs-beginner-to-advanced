@@ -36,3 +36,12 @@ const readFileCallback = (err, data) => {
 const f = "test123.txt";
 fs.readFile(f, readFileCallback);
 setImmediate(() => console.log("setImmediate called!"));
+
+// Node.js Architecture
+console.log("Start");
+
+setTimeout(() => console.log("timeout"), 0);
+
+Promise.resolve().then(() => console.log("promise"));
+
+console.log("end");
